@@ -3,8 +3,45 @@
 <<head>
     <meta charset="utf-8" />
     <title>Document</title>
+      <style>
+        .cls-1 {
+          fill: #fff;
+          stroke: #000;
+          stroke-miterlimit: 10;
+          stroke-dasharray: 50;
+          transition: 5s;
+        }
+      </style>
   </head>
   <body>
-    <h1>Hello ^-^</h1>
+    <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 229.28 264.19">
+
+      <path
+      class="cls-1"
+      d="M352.19,98.86S312.32,111.7,312.32,155s13.52,74.32-18.24,79.05-3.38,0-3.38,0,10.81,24.32,20.95,29.73-.18,11.49,4,14.19,10.23,12.16,10.23,14.86-8.79,7.44-6.76,11.49,14.19,24.32,13.51,39.87,102.71-3.38,122.3-15.55,46.62-60.13,52-79.73-46.62,26.36-50.68-45.27-13.51-65.54-13.51-65.54S426.51,265.76,440,283.32c0,0-61.49-104.73-38.52-143.24,0,0-54.73,45.27-46.62,96.62,0,0-19.59-93.24,3.38-109.46S412.32,86.7,412.32,86.7"
+      transform="translate(-278.53 -86.31)"/>
+  </svg>
+
+    <h1>Helloww \(•○•\)</h1>
+
+    <button id="button">click me</button>
+    <script>
+      var path = document.querySelector('.cls-1');
+      path.style.strokeDasharray = path.getTotalLenght();
+      path.style.strokeDashoffset = path.getTotalLenght();
+
+      var button = document.querySelector('#button');
+      var toggler = true;
+      button.addEventListener('click', function(){
+        if (toggler) {
+          path.style.strokeDashoffset = 0;
+        } else {
+          path.style.strokeDashoffset = path.getTotalLenght();
+        }
+        toggler = !toggler;
+      });
+        path.style.stokeDashoffset = 0;
+      });
+    </script>
   </body>
 </html>
